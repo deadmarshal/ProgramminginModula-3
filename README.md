@@ -1,2 +1,10 @@
 # ProgramminginModula-3
-Repository for Programming in Modula-3 Course on Teachlr
+<p align=center>
+<a href="url">
+  <img src="https://github.com/deadmarshal/ProgramminginModula-3/blob/main/res/M3.png"
+	height="400" width="400">
+</a>
+</p>
+<br>
+Repository for Programming in Modula-3 Course on <a href="https://teachlr.com">Teachlr</a>
+
