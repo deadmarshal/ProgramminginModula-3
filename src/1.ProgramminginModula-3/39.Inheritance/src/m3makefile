@@ -1,0 +1,3 @@
+import("libsio")
+implementation("Main")
+program("main")

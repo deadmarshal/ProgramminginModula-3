@@ -1,0 +1,24 @@
+* Why Modula-3?
+1. Interfaces and Modules: The interface and module system of Modula-3
+   allows us to create and use Abstract Data Types(ADTs) which are a
+   powerful feature where the actual implementation of a type is
+   hidden to the clients and only the desired functionality is
+   exposed to the client through the interface.
+2. Objects: The Object type of Modula-3 is a simple yet powerful
+   mechanism to program in an Object Oriented manner, which includes
+   subclassing,overriding,and inheritance features.
+3. Generics: Generics are a way to declare and use procedures
+   that can act of different types, and this allows us to write
+   powerful data structures and their corresponding algorithms,
+   which are type safe.
+4. Threads: Dividing a computation among multiple concurrent processes
+   is a fundamental method of separating concerns and Modula-3 has
+   native support for them.
+5. Safety: A language is unsafe if its misuse can corrupt the runtime
+   system so that further execution of the program is not faithful to
+   the language semantics. In Modula-3 we can separate the unsafe
+   part of the program into a separate module and make a separate
+   safe interface to use it. This way we can ensure that the clients
+   of the program do not misuse a library and programs will become
+   error-free.
+

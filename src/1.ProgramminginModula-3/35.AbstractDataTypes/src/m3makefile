@@ -1,0 +1,9 @@
+import("libm3")
+import("libsio")
+
+interface("Fraction")
+implementation("Fraction")
+
+implementation("Main")
+program("main")
+

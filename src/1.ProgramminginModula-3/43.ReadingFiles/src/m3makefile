@@ -1,0 +1,5 @@
+import("libm3")
+import("libsio")
+implementation("Main")
+program("main")
+

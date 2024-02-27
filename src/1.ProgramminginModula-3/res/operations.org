@@ -1,0 +1,145 @@
+#+STARTUP: latexpreview
+#+startup: preview
+* Basic Arithmetic Operations
+#+attr_latex: :align |c|c|c|c|c|c|
+|---------------+----------+-------------+----------------+----------+--------|
+| Type          | Addition | Subtraction | Multiplication | Division | Modulo |
+|---------------+----------+-------------+----------------+----------+--------|
+| Ordinal Types | +        | -           | *              | DIV      | MOD    |
+| Float Types   | +        | -           | *              | /        | MOD    |
+|---------------+----------+-------------+----------------+----------+--------|
+
+#+attr_latex: :align |c|c|c|c|c|c|
+|---------------+---------------+-------------------+----------------+----------+----------|
+| Type          | Inc/Dec by 1  | Inc/Dec by y      | Absolute Value | MIN      | MAX      |
+|---------------+---------------+-------------------+----------------+----------+----------|
+| Ordinal Types | INC(x),DEC(x) | INC(x,y),DEC(x,y) | ABS(x)         | MIN(x,y) | MAX(x,y) |
+| Float Types   | -             | -                 | ABS(x)         | MIN(x,y) | MAX(x,y) |
+|---------------+---------------+-------------------+----------------+----------+----------|
+
+* Relational Operations
+#+attr_latex: :align |c|l|
+|---------+-----------------------------------------------------------------------|
+| Symbols | Description                                                           |
+|---------+-----------------------------------------------------------------------|
+| x = y   | is true if x and y have the same value, otherwise false.              |
+| x # y   | is true if x and y do not have the same value, otherwise false.       |
+| x < y   | is true if the value of x is less than that of y, otherwise false.    |
+| x > y   | is true if the value of x is greater than that of y, otherwise false. |
+| x >= y  | is true if x = y or x > y, otherwise false.                           |
+| x <= y  | is true if x = y or x < y, otherwise false.                           |
+|---------+-----------------------------------------------------------------------|
+
+* Logical Operations
+#+attr_latex: :align |c|c|
+|---------+-------------|
+| Keyword | Description |
+|---------+-------------|
+| NOT     | Negation    |
+| OR      | Or          |
+| AND     | And         |
+|---------+-------------|
+
+* Truth Table
+#+attr_latex: :align |c|c|c|c|c|
+|-------+-------+-------+-------+--------+---------|
+| p     | q     | NOT p | NOT q | p OR q | p AND q |
+|-------+-------+-------+-------+--------+---------|
+| true  | true  | false | false | true   | true    |
+| true  | false | false | true  | true   | false   |
+| false | true  | true  | false | true   | false   |
+| false | false | true  | true  | false  | false   |
+|-------+-------+-------+-------+--------+---------|
+
+* Operator Precedence
+Operator Precedence from highest to lowest:
+#+attr_latex: :align |c|l|
+|----+-----------------------------------------------------------|
+|    | Description                                               |
+|----+-----------------------------------------------------------|
+|  1 | Built-in functions (ABS,FIRST,MAX,NARROW,NEW,etc.)        |
+|  2 | Field and method selection (x.a)                          |
+|  3 | Function calls, subscripts, constructors (F(x),a[i],T{x}) |
+|  4 | Dereferencing (x^)                                        |
+|  5 | Unary plus and minus (+,-)                                |
+|  6 | Multiplicative operators (*,DIV,/,MOD)                    |
+|  7 | Additive operators and string concatenation (+, -, &)     |
+|  8 | Relational operators and set inclusion (=,#,<,<=,>=,>,IN) |
+|  9 | Logical negation (NOT)                                    |
+| 10 | Logical conjuncation (AND)                                |
+| 11 | Logical disjunction (OR)                                  |
+|----+-----------------------------------------------------------|
+
+* Type conversions between REALs and INTEGER
+#+attr_latex: :align |c|c|l|
+|-------------------+------------------+-------------------------------------------------|
+| Built-in function | Direction        | Note                                            |
+|-------------------+------------------+-------------------------------------------------|
+| FLOAT(I)          | INTEGER -> REAL  | Converts an INTEGER to a floating-point number. |
+|                   |                  | The value of the number is preserved.           |
+|-------------------+------------------+-------------------------------------------------|
+| FLOAT(R,LONGREAL) | REAL -> LONGREAL | Converts a REAL number to a LONGREAL type.      |
+|                   |                  | The value of the number is preserved.           |
+|-------------------+------------------+-------------------------------------------------|
+| ROUND(R)          | REAL -> INTEGER  | Returns the INTEGER closest to R.               |
+|-------------------+------------------+-------------------------------------------------|
+| TRUNC(R)          | REAL -> INTEGER  | Truncates (cuts off) the digits                 |
+|                   |                  | after the decimal point.                        |
+|-------------------+------------------+-------------------------------------------------|
+| FLOOR(R)          | REAL -> INTEGER  | Returns the largest INTEGER I such that I <= R. |
+|-------------------+------------------+-------------------------------------------------|
+| CEILING(R)        | REAL -> INTEGER  | Returns the largest INTEGER I such that I >= R. |
+|-------------------+------------------+-------------------------------------------------  |
+
+* Set operations
+#+attr_latex: :align |l|l|
+#+caption Set operations
+|-------------------------+----------------------------------------------|
+| Name                    | Description                                  |
+|-------------------------+----------------------------------------------|
+| Union(+)                | S + T = {x \mid (x \in S) \or (x \in T)}     |
+|                         | S + T is the set of all elements that        |
+|                         | occur in S or in T or in both sets.          |
+|-------------------------+----------------------------------------------|
+| Difference(-)           | S - T = {x \mid (x \in S) \and (x \notin T)} |
+|                         | S - T is the set of all elements that occur  |
+|                         | in S but not in T.                           |
+|-------------------------+----------------------------------------------|
+| Intersection(*)         | S * T = {x \mid (x \in S) \and (x \in T)}    |
+|                         | S * T is the set of all elements that occur  |
+|                         | both in S and in T.                          |
+|-------------------------+----------------------------------------------|
+| Symmetric Difference(/) | S / T = {x \mid (x \in S \and x \notin T)    |
+|                         | \or (x \in T \and x \notin S)}               |
+|                         | S / T is the set of all elements that        |
+|                         | occur in S or in T, but not in both.         |
+|-------------------------+----------------------------------------------|
+
+* Set Relations
+#+caption Set relations
+#+attr_latex: :align |l|l|
+|--------------------+----------------------------------------------------|
+| Name               | Description                                        |
+|--------------------+----------------------------------------------------|
+| Equality(=)        | S = T is true $\iff$                               |
+|                    | S and T contain the same elements                  |
+|--------------------+----------------------------------------------------|
+| Inequality(#)      | $S \neq T \iff \not(S = T)$                        |
+|--------------------+----------------------------------------------------|
+| Subset(<=)         | $S <= T \iff \forall_s \in S : s \in T$            |
+|                    | iff all elements in S also occur in T              |
+|--------------------+----------------------------------------------------|
+| Proper Subset(<)   | $S < T \iff (S <= T) \land (\text{S} \# \text{T})$ |
+|--------------------+----------------------------------------------------|
+| Superset(>=)       | $S >= T \iff T <= S$                               |
+|--------------------+----------------------------------------------------|
+| Proper Superset(>) | $S > T \iff T < S$                                 |
+|--------------------+----------------------------------------------------|
+| Contained(IN)      | $\text{e IN S} \iff e \in S$                       |
+|                    | is true if element e is contained in set S.        |
+|                    | E must be assignment compatible with the           |
+|                    | base type of S. Note that IN deviates from         |
+|                    | the other relations because it doesn't             |
+|                    | combine two operands of the same type.             |
+|--------------------+----------------------------------------------------|
+
