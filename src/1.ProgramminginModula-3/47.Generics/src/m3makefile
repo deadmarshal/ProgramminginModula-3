@@ -1,0 +1,12 @@
+import("libm3")
+import("libsio")
+import("stable")
+
+generic_module("GenericStack")
+
+module("IntStack") % specialization of GenericStack
+module("TextStack") % specialization of GenericStack
+
+implementation("Main")
+program("main")
+
