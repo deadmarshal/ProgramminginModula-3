@@ -66,7 +66,7 @@ Operator Precedence from highest to lowest:
 |  7 | Additive operators and string concatenation (+, -, &)     |
 |  8 | Relational operators and set inclusion (=,#,<,<=,>=,>,IN) |
 |  9 | Logical negation (NOT)                                    |
-| 10 | Logical conjuncation (AND)                                |
+| 10 | Logical conjunction (AND)                                 |
 | 11 | Logical disjunction (OR)                                  |
 |----+-----------------------------------------------------------|
 
@@ -89,7 +89,7 @@ Operator Precedence from highest to lowest:
 | FLOOR(R)          | REAL -> INTEGER  | Returns the largest INTEGER I such that I <= R. |
 |-------------------+------------------+-------------------------------------------------|
 | CEILING(R)        | REAL -> INTEGER  | Returns the largest INTEGER I such that I >= R. |
-|-------------------+------------------+-------------------------------------------------  |
+|-------------------+------------------+-------------------------------------------------|
 
 * Set operations
 #+attr_latex: :align |l|l|
