@@ -94,26 +94,25 @@ Operator Precedence from highest to lowest:
 * Set operations
 #+attr_latex: :align |l|l|
 #+caption Set operations
-|-------------------------+----------------------------------------------|
-| Name                    | Description                                  |
-|-------------------------+----------------------------------------------|
-| Union(+)                | S + T = {x \mid (x \in S) \or (x \in T)}     |
-|                         | S + T is the set of all elements that        |
-|                         | occur in S or in T or in both sets.          |
-|-------------------------+----------------------------------------------|
-| Difference(-)           | S - T = {x \mid (x \in S) \and (x \notin T)} |
-|                         | S - T is the set of all elements that occur  |
-|                         | in S but not in T.                           |
-|-------------------------+----------------------------------------------|
-| Intersection(*)         | S * T = {x \mid (x \in S) \and (x \in T)}    |
-|                         | S * T is the set of all elements that occur  |
-|                         | both in S and in T.                          |
-|-------------------------+----------------------------------------------|
-| Symmetric Difference(/) | S / T = {x \mid (x \in S \and x \notin T)    |
-|                         | \or (x \in T \and x \notin S)}               |
-|                         | S / T is the set of all elements that        |
-|                         | occur in S or in T, but not in both.         |
-|-------------------------+----------------------------------------------|
+|-------------------------+------------------------------------------------------------------------------------------------|
+| Name                    | Description                                                                                    |
+|-------------------------+------------------------------------------------------------------------------------------------|
+| Union(+)                | S + T = $\text{\{}x \mid (x \in S) \vee (x \in T)\text{\}}$                                    |
+|                         | S + T is the set of all elements that                                                          |
+|                         | occur in S or in T or in both sets.                                                            |
+|-------------------------+------------------------------------------------------------------------------------------------|
+| Difference(-)           | S - T = $\text{\{}x \mid (x \in S) \wedge (x \notin T)\text{\}}$                               |
+|                         | S - T is the set of all elements that occur                                                    |
+|                         | in S but not in T.                                                                             |
+|-------------------------+------------------------------------------------------------------------------------------------|
+| Intersection(*)         | S * T = $\text{\{}x \mid (x \in S) \wedge (x \in T)\text{\}}$                                  |
+|                         | S * T is the set of all elements that occur                                                    |
+|                         | both in S and in T.                                                                            |
+|-------------------------+------------------------------------------------------------------------------------------------|
+| Symmetric Difference(/) | S / T = $\text{\{}x \mid (x \in S \wedge x \notin T)\vee (x \in T \wedge x \notin S)\text{\}}$ |
+|                         | S / T is the set of all elements that                                                          |
+|                         | occur in S or in T, but not in both.                                                           |
+|-------------------------+------------------------------------------------------------------------------------------------|
 
 * Set Relations
 #+caption Set relations
