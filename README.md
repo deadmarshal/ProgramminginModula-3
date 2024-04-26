@@ -6,5 +6,5 @@
 </a>
 </p>
 <br>
-Repository for Programming in Modula-3 Course on <a href="https://teachlr.com">Teachlr</a>
+Repository for Programming in Modula-3 Course on <a href="https://teachlr.com/cursos-online/programming-in-modula-3">Teachlr</a>
 
