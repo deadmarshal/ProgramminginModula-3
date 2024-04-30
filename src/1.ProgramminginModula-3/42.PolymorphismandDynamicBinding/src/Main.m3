@@ -98,7 +98,7 @@ BEGIN
 
      TYPE
        Super = OBJECT METHODS m1() := P1 END;
-       Sub = OBJECT METHODS m2() := P2 END;
+       Sub = Super OBJECT METHODS m2() := P2 END;
      VAR
        super := NEW(Super);  
        sub := NEW(Sub);
